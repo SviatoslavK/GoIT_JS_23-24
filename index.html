@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW 23-24</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <script type="text/template" id="wrapper-template">
+    <div class="wrapper">
+        <h1 class="header">Your own ToDo App</h1>
+        <ul class="list"></ul>
+        <div class="input-wrapper">
+        <input type="text" class="item-value">
+        <button class="item-add">Add</button>
+        </div>
+    </div>
+    </script>
+    <script type="text/template" id="list-template">
+        <% for (var i = 0; i < data.length; i++) {%>
+            <li class="list-item"><%= data[i] %> <span data-value="<%= data[i] %>" class="item-delete">X</span></li>
+        <% }%>
+    </script>
+
+    <script data-main="js/app.js" src="js/require.js"></script>
+</body>
+</html>
