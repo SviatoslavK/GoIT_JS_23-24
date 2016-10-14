@@ -28,6 +28,10 @@ define(
 
                 return self.data;
             };
+            self.editItem = function(oldItem, newItem) {
+                self.data[self.data.indexOf(oldItem)] = newItem;
+                return self.data;
+            }
         }
         return Model;
     }
